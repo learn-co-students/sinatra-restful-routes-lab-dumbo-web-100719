@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>home page with recipe names</title>
+</head>
+<body>
+<h1>Recipe Home</h1>
+<ul>
+<%@recipes.each do |recipe|%>
+    <li><a href= "/recipes/<%=recipe.id%>"><%=recipe.name%></a></li>
+    <%end%>
+</ul>
+
+<h2><a href= "/recipes/new">Create a new recipe!</a></h2>
+    
+</body>
+</html>
